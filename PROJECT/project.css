@@ -57,7 +57,7 @@ nav {
 #projects {
     margin-top: 80px;
     text-align: center;
-    height: 100VH;
+    padding: 40px 40px 80px;
 }
 
 #projects h2 {
@@ -75,28 +75,61 @@ nav {
 }
 
 .project {
-    background-color: #1f1f1f;
-    border-radius: 10px;
-    padding: 20px;
-    width: 250px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    background: #1f1f1f;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 340px;
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 25px rgba(0,0,0,.35);
+    transition: .3s;
 }
 
-.project img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.3s;
+.project:hover{
+    transform: translateY(-8px);
+}
+
+.project h3{
+    margin:20px 15px 10px;
+    color:#fff;
+    font-size:30px;
+}
+
+.project p{
+    color:#cfcfcf;
+    font-size:18px;
+    line-height:1.7;
+    margin:0 15px 25px;
+    flex:1;
+}
+
+.project .btn{
+    display:inline-block;
+    margin:20px auto 25px;
+    padding:12px 24px;
+    background:#00bcd4;
+    color:#fff;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.project .btn:hover{
+    background:#0097a7;
+    transform:scale(1.05);
+}
+
+.project img{
+     width:100%;
+    height:220px;
+    object-fit:cover;
+    display:block;
+    transition:.4s;
 }
 
 .project img:hover {
     transform: scale(1.05);
 }
 
-.project p {
-    color: #b0b0b0;
-    font-size: 1.2em;
-    margin-top: 10px;
-}
